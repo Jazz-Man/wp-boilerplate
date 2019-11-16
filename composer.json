@@ -32,19 +32,30 @@
   "require": {
     "php": ">=7.1",
     "composer/installers": "^1.7",
-    "vlucas/phpdotenv": "^3.6.0",
+    "jazzman/custom-post-type": "^1.3",
+    "jazzman/htaccess": "^0.3.1",
+    "jazzman/widget-builder": "^2.0",
+    "jazzman/wp-app-config": "^2.0",
+    "jazzman/wp-mail": "^0.2.0",
+    "jazzman/wp-performance": "^1.4",
     "oscarotero/env": "^1.2.0",
     "roots/wordpress": "5.2.3",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "vlucas/phpdotenv": "^3.6.0",
+    "yoast/wordpress-seo": "^12.5"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master"
+    "dg/composer-cleaner": "^2.1",
+    "roave/security-advisories": "dev-master",
+    "symfony/var-dumper": "^4.3"
   },
   "config": {
-    "optimize-autoloader": true,
+    "sort-packages": true,
     "preferred-install": "dist",
-    "sort-packages": true
+    "optimize-autoloader": true,
+    "classmap-authoritative": true,
+    "apcu-autoloader": true
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -54,14 +65,32 @@
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web/wp"
+    "wordpress-install-dir": "web/wp",
+    "cleaner-ignore":{
+      "yoast/api-libs": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "JazzMan\\Themes\\":"web/app/themes/boilerplate/includes"
+    },
+    "files": [
+      "web/app/themes/boilerplate/includes/helper.php"
+    ]
   },
   "scripts": {
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ],
-    "test": [
-      "phpcs"
-    ]
+    "post-autoload-dump": [
+      "rm -rf web/wp/wp-content/themes/twenty*"
+    ],
+    "deploy": [
+      "@clearNodeModules",
+      "npm install",
+      "npm run production",
+      "@clearNodeModules"
+    ],
+    "clearNodeModules": "rm -rf node_modules"
   }
 }
