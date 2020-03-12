@@ -43,7 +43,7 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "vlucas/phpdotenv": "^3.6.0",
-    "yoast/wordpress-seo": "^12.5"
+    "yoast/wordpress-seo": "^13.2"
   },
   "require-dev": {
     "dg/composer-cleaner": "^2.1",

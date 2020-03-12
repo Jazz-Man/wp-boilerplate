@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19da0a6ccb7d7eb5e4b927b289a10d5a",
+    "content-hash": "50542c4578cac67ea910966c2c64adac",
     "packages": [
         {
             "name": "cmb2/cmb2",
@@ -183,16 +183,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.4.1",
+            "version": "6.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "0895c932405407fd3a7368b6910c09a24d26db11"
+                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0895c932405407fd3a7368b6910c09a24d26db11",
-                "reference": "0895c932405407fd3a7368b6910c09a24d26db11",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
+                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
                 "shasum": ""
             },
             "require": {
@@ -207,12 +207,13 @@
                 "psr/log": "^1.1"
             },
             "suggest": {
+                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.3-dev"
+                    "dev-master": "6.5-dev"
                 }
             },
             "autoload": {
@@ -245,7 +246,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-10-23T15:58:00+00:00"
+            "time": "2019-12-23T11:57:10+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1642,16 +1643,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.35",
+            "version": "v3.4.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "0ea4d39ca82409a25a43b61ce828048a90000920"
+                "reference": "b06b36883abc61eb8fb576e89102a9ba6c9ee7ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/0ea4d39ca82409a25a43b61ce828048a90000920",
-                "reference": "0ea4d39ca82409a25a43b61ce828048a90000920",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/b06b36883abc61eb8fb576e89102a9ba6c9ee7ee",
+                "reference": "b06b36883abc61eb8fb576e89102a9ba6c9ee7ee",
                 "shasum": ""
             },
             "require": {
@@ -1709,7 +1710,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-08T16:18:30+00:00"
+            "time": "2020-02-19T17:19:43+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1872,37 +1873,6 @@
             "time": "2019-09-10T21:37:39+00:00"
         },
         {
-            "name": "xrstf/composer-php52",
-            "version": "v1.0.20",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer-php52/composer-php52.git",
-                "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer-php52/composer-php52/zipball/bd41459d5e27df8d33057842b32377c39e97a5a8",
-                "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-default": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "xrstf\\Composer52": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "time": "2016-04-16T21:52:24+00:00"
-        },
-        {
             "name": "yoast/i18n-module",
             "version": "3.1.1",
             "source": {
@@ -1994,34 +1964,33 @@
         },
         {
             "name": "yoast/wordpress-seo",
-            "version": "12.5",
+            "version": "13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast-dist/wordpress-seo.git",
-                "reference": "19b41f99ac7f977545da6b2acba81bf2be4cf9ef"
+                "reference": "4e453fb69132ed9709fbe5896802ed28b2350450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast-dist/wordpress-seo/zipball/19b41f99ac7f977545da6b2acba81bf2be4cf9ef",
-                "reference": "19b41f99ac7f977545da6b2acba81bf2be4cf9ef",
+                "url": "https://api.github.com/repos/Yoast-dist/wordpress-seo/zipball/4e453fb69132ed9709fbe5896802ed28b2350450",
+                "reference": "4e453fb69132ed9709fbe5896802ed28b2350450",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "~1.0",
                 "j4mie/idiorm": "^1.5",
                 "league/oauth2-client": "^2.4",
-                "php": "^5.6.0||^7.0",
+                "php": "^5.6.20||^7.0",
                 "pimple/pimple": "^3.2",
                 "psr/log": "^1.0",
                 "ruckusing/ruckusing-migrations": "^1.1",
                 "symfony/dependency-injection": "^3.4",
-                "xrstf/composer-php52": "^1.0.20",
                 "yoast/i18n-module": "^3.1.1",
                 "yoast/license-manager": "1.6.0"
             },
             "require-dev": {
                 "atanamo/php-codeshift": "^1.0",
-                "brain/monkey": "^2.2",
+                "brain/monkey": "^2.4",
                 "humbug/php-scoper": "^0.12.0",
                 "phpcompatibility/phpcompatibility-wp": "^2.0.0",
                 "phpunit/phpunit": "^5.7",
@@ -2037,7 +2006,6 @@
                     "inc/",
                     "deprecated/",
                     "cli/",
-                    "deprecated/",
                     "src/"
                 ]
             },
@@ -2058,7 +2026,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2019-11-13T08:11:30+00:00"
+            "time": "2020-03-03T08:03:37+00:00"
         }
     ],
     "packages-dev": [
