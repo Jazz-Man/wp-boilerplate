@@ -31,8 +31,8 @@
   ],
   "require": {
     "php": ">=7.1",
-    "composer/installers": "^1.8",
-    "jazzman/custom-post-type": "^1.3",
+    "composer/installers": "^1.7",
+    "jazzman/custom-post-type": "^2.2",
     "jazzman/htaccess": "^0.3.1",
     "jazzman/widget-builder": "^2.0",
     "jazzman/wp-app-config": "^2.0",
@@ -43,7 +43,7 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "vlucas/phpdotenv": "^3.6.0",
-    "yoast/wordpress-seo": "^12.5"
+    "yoast/wordpress-seo": "^13.2"
   },
   "require-dev": {
     "dg/composer-cleaner": "^2.1",
