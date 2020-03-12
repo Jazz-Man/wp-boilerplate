@@ -844,16 +844,16 @@
         },
         {
             "name": "jazzman/wp-performance",
-            "version": "1.4.3",
+            "version": "1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/wp-performance.git",
-                "reference": "ee5ea0396ca0eeb98426c45b8f13dfaa025130f3"
+                "reference": "adf14de43cb5b7ffca21ddf821e5c47f6f0ce54f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/wp-performance/zipball/ee5ea0396ca0eeb98426c45b8f13dfaa025130f3",
-                "reference": "ee5ea0396ca0eeb98426c45b8f13dfaa025130f3",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-performance/zipball/adf14de43cb5b7ffca21ddf821e5c47f6f0ce54f",
+                "reference": "adf14de43cb5b7ffca21ddf821e5c47f6f0ce54f",
                 "shasum": ""
             },
             "require": {
@@ -868,14 +868,14 @@
             "require-dev": {
                 "roave/security-advisories": "dev-master"
             },
+            "suggest": {
+                "jazzman/wp-performance-shortcode": "Better Shortcode Parser"
+            },
             "type": "wordpress-muplugin",
             "autoload": {
                 "psr-4": {
                     "JazzMan\\Performance\\": "src"
-                },
-                "files": [
-                    "src/helper.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -887,7 +887,7 @@
                     "email": "vsokolyk@gmail.com"
                 }
             ],
-            "time": "2019-11-10T18:02:46+00:00"
+            "time": "2020-03-08T17:04:06+00:00"
         },
         {
             "name": "league/oauth2-client",
