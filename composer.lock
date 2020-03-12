@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e158a4692ec5cf7d1098397c22c6eeec",
+    "content-hash": "5ae69fb1516dcc2615cbc94eaf78b8fb",
     "packages": [
         {
             "name": "cmb2/cmb2",
@@ -61,16 +61,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0"
+                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0",
+                "url": "https://api.github.com/repos/composer/installers/zipball/7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
+                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
                 "shasum": ""
             },
             "require": {
@@ -118,6 +118,7 @@
                 "Kanboard",
                 "Lan Management System",
                 "MODX Evo",
+                "MantisBT",
                 "Mautic",
                 "Maya",
                 "OXID",
@@ -172,6 +173,7 @@
                 "shopware",
                 "silverstripe",
                 "sydes",
+                "sylius",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -179,7 +181,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2019-08-12T15:00:31+00:00"
+            "time": "2020-02-07T10:39:20+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -523,55 +525,6 @@
             ],
             "description": "A single class to help you build more advanced custom post types quickly.",
             "time": "2020-03-11T13:51:29+00:00"
-        },
-        {
-            "name": "jazzman/htaccess",
-            "version": "0.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jazz-Man/htaccess.git",
-                "reference": "9ba43ce434a9afd60c76baef2db4739caaacd4c0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/htaccess/zipball/9ba43ce434a9afd60c76baef2db4739caaacd4c0",
-                "reference": "9ba43ce434a9afd60c76baef2db4739caaacd4c0",
-                "shasum": ""
-            },
-            "require": {
-                "jazzman/autoload-interface": "^0.1.0",
-                "jazzman/singleton-trait": "^1.1",
-                "php": ">=5.6",
-                "tivie/htaccess-parser": "^0.2.3"
-            },
-            "require-dev": {
-                "roave/security-advisories": "dev-master"
-            },
-            "type": "wordpress-muplugin",
-            "autoload": {
-                "psr-4": {
-                    "JazzMan\\Htaccess\\": "src"
-                },
-                "files": [
-                    "helper.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Vasyl Sokolyk",
-                    "email": "vsokolyk@gmail.com"
-                }
-            ],
-            "description": "Boilerplate's .htaccess for WordPress",
-            "keywords": [
-                "htaccess",
-                "wordpress"
-            ],
-            "time": "2019-05-28T18:09:37+00:00"
         },
         {
             "name": "jazzman/inflector",
@@ -1408,7 +1361,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.2.3"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.2.3",
+                "reference": "5.2.3"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -1772,51 +1726,6 @@
                 "portable"
             ],
             "time": "2019-08-06T08:03:45+00:00"
-        },
-        {
-            "name": "tivie/htaccess-parser",
-            "version": "0.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tivie/php-htaccess-parser.git",
-                "reference": "36d89eeaa45c215a45e315765d7b64b333f5f8d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tivie/php-htaccess-parser/zipball/36d89eeaa45c215a45e315765d7b64b333f5f8d5",
-                "reference": "36d89eeaa45c215a45e315765d7b64b333f5f8d5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpdocumentor/phpdocumentor": "2.8.1",
-                "phpunit/phpunit": "4.3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Tivie\\HtaccessParser\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Estevão Soares dos Santos",
-                    "email": "estevao@soares-dos-santos.com"
-                }
-            ],
-            "description": "A .htaccess parser and validator implemented in PHP",
-            "homepage": "https://github.com/tivie/php-htaccess-parser",
-            "keywords": [
-                ".htaccess",
-                "htaccess"
-            ],
-            "time": "2017-10-21T03:19:48+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

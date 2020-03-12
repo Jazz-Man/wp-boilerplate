@@ -31,9 +31,8 @@
   ],
   "require": {
     "php": ">=7.1",
-    "composer/installers": "^1.7",
+    "composer/installers": "^1.8",
     "jazzman/custom-post-type": "^2.2",
-    "jazzman/htaccess": "^0.3.1",
     "jazzman/widget-builder": "^2.0",
     "jazzman/wp-app-config": "^2.0",
     "jazzman/wp-mail": "^0.2.0",
