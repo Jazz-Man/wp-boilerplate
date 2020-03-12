@@ -37,9 +37,9 @@
     "jazzman/wp-mail": "^0.2.0",
     "jazzman/wp-performance": "^1.6",
     "oscarotero/env": "^1.2.0",
-    "roots/wordpress": "5.2.3",
-    "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/wordpress": "^5.3",
+    "roots/wp-config": "^1.0",
+    "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^3.6.0"
   },
   "require-dev": {
