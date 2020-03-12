@@ -37,7 +37,7 @@
     "jazzman/widget-builder": "^2.0",
     "jazzman/wp-app-config": "^2.0",
     "jazzman/wp-mail": "^0.2.0",
-    "jazzman/wp-performance": "^1.4",
+    "jazzman/wp-performance": "^1.6",
     "oscarotero/env": "^1.2.0",
     "roots/wordpress": "5.2.3",
     "roots/wp-config": "1.0.0",
