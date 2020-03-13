@@ -6,6 +6,7 @@ const config = require("./mix-config");
 mix.setPublicPath(config.distDir);
 mix.setResourceRoot("../");
 mix.js(`${config.themeDir}/src/js/main`, "js");
+mix.sass(`${config.themeDir}/src/scss/bootstrap-grid.scss`, "css");
 mix.sass(`${config.themeDir}/src/scss/main.scss`, "css");
 
 mix.webpackConfig({
@@ -15,6 +16,15 @@ mix.webpackConfig({
   },
   devtool: "source-map",
   externals: config.externals,
+});
+
+mix.options({
+  autoprefixer: {
+    enabled: true,
+    options: {
+      grid: 'autoplace',
+    }
+  }
 });
 
 mix.disableNotifications();
