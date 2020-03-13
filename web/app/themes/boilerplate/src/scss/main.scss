@@ -1,0 +1,14 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import "~bootstrap/scss/functions";
+@import "functions/functions";
+@import "fonts";
+@import "variables";
+@import "bootstrap";
+@import "utils";
+@import "components";
+@import "layouts";
+@import "pages";

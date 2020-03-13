@@ -1,0 +1,3 @@
+@function is-type($var, $type) {
+  @return type-of($var) == $type;
+}

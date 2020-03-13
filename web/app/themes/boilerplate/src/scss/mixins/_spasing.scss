@@ -1,0 +1,17 @@
+@mixin spasing($props, $coordinate: 0, $space: 0) {
+  $prop: map-get($spacers_props, $props);
+  @if (is-type($coordinate, number)) {
+    $value: map-get($spacers, $coordinate);
+    #{$prop}: $value;
+  } @else {
+    $value: map-get($spacers, $space);
+    $coordinates: map-get($spacers_coordinates, $coordinate);
+    @if (is-type($coordinates, list)) {
+      @each $coordinate in $coordinates {
+        #{$prop}-#{$coordinate}: $value;
+      }
+    } @else {
+      #{$prop}-#{$coordinates}: $value;
+    }
+  }
+}

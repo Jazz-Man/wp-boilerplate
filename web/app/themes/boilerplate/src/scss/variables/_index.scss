@@ -1,0 +1,23 @@
+@import "colors";
+
+$enable-grid-classes:false;
+
+$spacers_props: (
+  m: "margin",
+  p: "padding"
+) !default;
+
+$spacers_coordinates: (
+  t: "top",
+  l: "left",
+  b: "bottom",
+  r: "right",
+  y: (
+    "top",
+    "bottom"
+  ),
+  x: (
+    "left",
+    "right"
+  )
+) !default;
