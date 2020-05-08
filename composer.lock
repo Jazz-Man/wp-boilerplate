@@ -167,16 +167,16 @@
         },
         {
             "name": "jazzman/custom-post-type",
-            "version": "2.2",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/custom-post-type.git",
-                "reference": "618f3b75bbd2e899be39037000937d94172c0553"
+                "reference": "d9d8d8f38f228c12e57ae88b3866a4ed6d94ec26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/custom-post-type/zipball/618f3b75bbd2e899be39037000937d94172c0553",
-                "reference": "618f3b75bbd2e899be39037000937d94172c0553",
+                "url": "https://api.github.com/repos/Jazz-Man/custom-post-type/zipball/d9d8d8f38f228c12e57ae88b3866a4ed6d94ec26",
+                "reference": "d9d8d8f38f228c12e57ae88b3866a4ed6d94ec26",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
                 }
             ],
             "description": "A single class to help you build more advanced custom post types quickly.",
-            "time": "2020-03-11T13:51:29+00:00"
+            "time": "2020-04-13T13:25:28+00:00"
         },
         {
             "name": "jazzman/inflector",
