@@ -120,6 +120,26 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROT
     $_SERVER['HTTPS'] = 'on';
 }
 
+/**
+ * HTTP_HOST and SERVER_NAME Security Issues.
+ *
+ * @see https://expressionengine.com/blog/http-host-and-server-name-security-issues
+ */
+$server_host = (string) $_SERVER['HTTP_HOST'];
+
+$_SERVER['HTTP_HOST'] = $current_server['host'] !== $server_host ? $current_server['host'] : $server_host;
+
+$cookies_hash = md5($current_server['host']);
+$cookies_prefix = str_replace(['.', ':'], '_', $current_server['host']);
+
+Config::define('COOKIEHASH', $cookies_hash);
+Config::define('TEST_COOKIE', "{$cookies_prefix}_testcookie");
+Config::define('AUTH_COOKIE', "{$cookies_prefix}_auth_{$cookies_hash}");
+Config::define('USER_COOKIE', "{$cookies_prefix}_user_{$cookies_hash}");
+Config::define('PASS_COOKIE', "{$cookies_prefix}_pass_{$cookies_hash}");
+Config::define('SECURE_AUTH_COOKIE', "{$cookies_prefix}_sec_{$cookies_hash}");
+Config::define('LOGGED_IN_COOKIE', "{$cookies_prefix}_logged_in_{$cookies_hash}");
+
 
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
