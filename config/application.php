@@ -44,7 +44,7 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
  */
 Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_SITEURL', env('WP_SITEURL'));
-
+$current_server = parse_url(env('WP_HOME'));
 /**
  * Custom Content Directory
  */
@@ -84,6 +84,17 @@ Config::define('SECURE_AUTH_SALT', env('SECURE_AUTH_SALT'));
 Config::define('LOGGED_IN_SALT', env('LOGGED_IN_SALT'));
 Config::define('NONCE_SALT', env('NONCE_SALT'));
 
+// Fix WP_CLI error
+if (defined('WP_CLI') && WP_CLI) {
+    $server_port = !empty($current_server['port']) ? $current_server['port'] : false;
+    $is_https = !empty($current_server['scheme']) && 'https' === $current_server['scheme'] ? 'on' : false;
+
+    $_SERVER['HTTP_HOST'] = $current_server['host'];
+    $_SERVER['SERVER_NAME'] = $current_server['host'];
+    $_SERVER['HTTPS'] = $is_https;
+    $_SERVER['SERVER_PORT'] = $server_port;
+}
+
 /**
  * Custom Settings
  */
@@ -108,6 +119,8 @@ ini_set('display_errors', '0');
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
     $_SERVER['HTTPS'] = 'on';
 }
+
+
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
