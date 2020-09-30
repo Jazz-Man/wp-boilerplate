@@ -42,7 +42,7 @@
     "roots/wordpress": "^5.4",
     "roots/wp-config": "^1.0",
     "roots/wp-password-bcrypt": "^1.0",
-    "vlucas/phpdotenv": "^4.1"
+    "vlucas/phpdotenv": "^5.2"
   },
   "require-dev": {
     "dg/composer-cleaner": "^2.1",
