@@ -37,7 +37,7 @@
     "jazzman/custom-post-type": "^2.2",
     "jazzman/wp-app-config": "^2.0",
     "jazzman/wp-mail": "^1.2",
-    "jazzman/wp-performance": "^1.9",
+    "jazzman/wp-performance": "^2.0",
     "oscarotero/env": "^1.2",
     "roots/wordpress": "^5.4",
     "roots/wp-config": "^1.0",
