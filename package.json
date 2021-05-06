@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Jazz-Man/wp-boilerplate#readme",
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.0.0",
     "document-ready": "^2.0.2"
   },
   "devDependencies": {
