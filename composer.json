@@ -31,27 +31,24 @@
   ],
   "require": {
     "php": ">=7.2",
-    "ext-ctype": "*",
-    "ext-mbstring": "*",
-    "composer/installers": "^1.9",
-    "jazzman/custom-post-type": "^2.2",
-    "jazzman/wp-app-config": "^2.0",
-    "jazzman/wp-mail": "^1.2",
-    "jazzman/wp-performance": "^2.0",
+    "jazzman/wp-mail": "^1.3",
+    "jazzman/wp-object-cache": "^2.1",
+    "jazzman/wp-performance": "^2.2",
     "oscarotero/env": "^1.2",
-    "roots/wordpress": "^5.4",
+    "roots/wordpress": "^5.7",
     "roots/wp-config": "^1.0",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^4.1"
   },
   "require-dev": {
-    "dg/composer-cleaner": "^2.1",
+    "dg/composer-cleaner": "^2.2",
     "roave/security-advisories": "dev-master",
-    "symfony/var-dumper": "^5.0"
+    "symfony/var-dumper": "^5.2"
   },
   "replace": {
     "symfony/polyfill-mbstring": "*",
-    "symfony/polyfill-ctype": "*"
+    "symfony/polyfill-ctype": "*",
+    "symfony/polyfill-php80": "*"
   },
   "config": {
     "sort-packages": true,
