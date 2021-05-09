@@ -1,72 +1,88 @@
-const mix = require("laravel-mix");
-const fs = require("fs");
-const { resolve } = require("path");
-const config = require("./webpack.mix.config");
+const mix = require('laravel-mix');
+const fs = require('fs');
+const { resolve } = require('path');
+const config = require('./webpack.mix.config');
 
-let webpackPlugins = [];
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const directoryPath = resolve(
-  __dirname,
-  `${config.themeDir}/src/scss/entry-points`
-);
+const plugins = [];
+
+if (mix.inProduction()) {
+  plugins.push(new CleanWebpackPlugin());
+}
+
+const directoryPath = resolve(__dirname, `${config.themeDir}/src/scss/entry-points`);
+const getFiles = (dir) => fs.readdirSync(dir).filter((file) => /\.[scss|css|tsx|ts|js]/.test(file));
+
+mix.setPublicPath(config.distDir);
+mix.setResourceRoot('../');
 
 
-mix.extend('rewriteRules', webpackConfig => {
-  let scssRule = webpackConfig.module.rules.find(rule => String(rule.test) === '/\\.scss$/');
+const mainJs = mix.js(`${config.themeDir}/src/js/main.js`, 'js');
+mainJs.js(`${config.themeDir}/src/admin/js/admin.js`, 'js');
 
-  scssRule.loaders[1] = { /* css-loader */
-    loader: 'css-loader',
-    options: {
-      modules: true,
-      importLoaders: 1,
-      localIdentName: '[name]_[local]_[hash:base64:4]'
-    }
-  };
+const mainStyle = mix.sass(`${config.themeDir}/src/scss/main.scss`, 'css');
+mainStyle.sass(`${config.themeDir}/src/admin/scss/admin.scss`, 'css');
+mainStyle.sass(`${config.themeDir}/src/scss/bootstrap-grid.scss`, 'css');
+
+getFiles(directoryPath).forEach((filepath) => mainStyle.sass(`${directoryPath}/${filepath}`, 'css'));
+
+const output = {
+    publicPath: `${config.publicPath}/`,
+    chunkFilename: 'js/[name].js',
+};
+
+mix.extend('rewriteRules', (webpackConfig) => {
+  const fontsRule = /(\.(woff2?|ttf|eot|otf)$|font.*\.svg$)/;
+  const imagesRule = /(\.(png|jpe?g|gif|webp)$|^((?!font).)*\.svg$)/;
+
+  const fonts = webpackConfig.module.rules.find((rule) => String(rule.test) === String(fontsRule));
+  const images = webpackConfig.module.rules.find((rule) => String(rule.test) === String(imagesRule));
+
+  if (fonts && fonts.use && fonts.use[0]) {
+    fonts.use[0].options.name = `${Config.fileLoaderDirs.fonts}/[name]-[contenthash].[ext]`;
+  }
+
+  if (images && images.use && images.use[0]) {
+    images.use[0].options.name = `${Config.fileLoaderDirs.images}/[name]-[hash].[ext]`;
+  }
 });
 
 mix.rewriteRules();
 
-
-mix.setPublicPath(config.distDir);
-mix.setResourceRoot("../");
-
-mix.js(`${config.themeDir}/src/js/main`, "js");
-mix.sass(`${config.themeDir}/src/scss/bootstrap-grid.scss`, "css");
-mix.sass(`${config.themeDir}/src/admin/scss/admin.scss`, "css");
-mix.sass(`${config.themeDir}/src/scss/main.scss`, "css");
-
-let getFiles = dir =>
-  fs.readdirSync(dir).filter(file => fs.statSync(`${dir}/${file}`).isFile());
-
-getFiles(directoryPath).forEach(filepath => {
-  mix.sass(`${directoryPath}/${filepath}`, "css");
+mix.webpackConfig((webpack) => {
+  return {
+    output,
+    externals: config.externals,
+    watchOptions: {
+      ignored: /node_modules/,
+    },
+    plugins,
+  };
 });
 
-mix.webpackConfig({
-  entry: {
-    admin: `${config.themeDir}/src/admin/js/admin`
-  },
-  output: {
-    publicPath: `${config.publicPath}/`,
-    chunkFilename: "js/[id].js",
-    filename: chunkData =>
-      chunkData.chunk.name === "admin"
-        ? "js/[name].js"
-        : `${chunkData.chunk.name}.js`,
-    crossOriginLoading:'anonymous'
-  },
-  externals: config.externals,
-  plugins: webpackPlugins
-});
+mix.sourceMaps(false);
 
 mix.options({
-  autoprefixer: {
-    enabled: true,
-    options: {
-      grid: "autoplace"
-    }
-  }
+  processCssUrls: true,
+  terser: {
+    parallel: true,
+    // cache: true,
+    terserOptions: {
+      compress: mix.inProduction(),
+    },
+  },
 });
 
-mix.disableNotifications();
-mix.sourceMaps();
+if (mix.inProduction()) {
+  mix.version();
+
+  mix.then(async () => {
+    const convertToFileHash = require('laravel-mix-make-file-hash');
+    const fileHashedManifest = await convertToFileHash({
+      publicPath: `${config.distDir}`,
+      blacklist: ['/js/style/*', '*.map'],
+      manifestFilePath: `${config.distDir}/mix-manifest.json`,
+    });
+  });
+}

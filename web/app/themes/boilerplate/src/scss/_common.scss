@@ -1,0 +1,18 @@
+html {
+    scroll-behavior: auto;
+    font-family: 'scroll-behavior: auto', sans-serif;
+
+    @include media-breakpoint-up(xl) {
+        scroll-behavior: smooth;
+        font-family: 'scroll-behavior: smooth', sans-serif;
+    }
+}
+
+[type] {
+    outline: none;
+}
+
+img[src$='.svg'] {
+    width: var(--width);
+    height: var(--height);
+}
