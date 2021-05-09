@@ -53,7 +53,7 @@ if (blockLibrary.length) {
           'theme.scss',
         ];
 
-        if (reqaredName.includes(style.name())) {
+        if ( style.extension() === '.scss' &&  !style.name().includes('native.scss')) {
             let styleDirName = basename(dirname(file));
             let newFileName = styleDirName === 'src' ? style.name() : `${styleDirName}/${style.name()}`;
             let destination = `${wpBlocksDir}/blocks/${newFileName}`;
