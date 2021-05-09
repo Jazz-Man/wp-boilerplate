@@ -5,32 +5,14 @@ const config = require('./webpack.mix.config');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-let webpackPlugins = [];
+const plugins = [];
 
 if (mix.inProduction()) {
-    webpackPlugins.push(new CleanWebpackPlugin());
+  plugins.push(new CleanWebpackPlugin());
 }
 
 const directoryPath = resolve(__dirname, `${config.themeDir}/src/scss/entry-points`);
 const getFiles = (dir) => fs.readdirSync(dir).filter((file) => /\.[scss|css|tsx|ts|js]/.test(file));
-
-mix.extend('rewriteRules', (webpackConfig) => {
-    const fontsRule = /(\.(woff2?|ttf|eot|otf)$|font.*\.svg$)/;
-    const imagesRule = /(\.(png|jpe?g|gif|webp)$|^((?!font).)*\.svg$)/;
-
-    const fonts = webpackConfig.module.rules.find((rule) => String(rule.test) === String(fontsRule));
-    const images = webpackConfig.module.rules.find((rule) => String(rule.test) === String(imagesRule));
-
-    if (fonts && fonts.use && fonts.use[0]) {
-        fonts.use[0].options.name = `${Config.fileLoaderDirs.fonts}/[name]-[contenthash].[ext]`;
-    }
-
-    if (images && images.use && images.use[0]) {
-        images.use[0].options.name = `${Config.fileLoaderDirs.images}/[name]-[hash].[ext]`;
-    }
-});
-
-mix.rewriteRules();
 
 mix.setPublicPath(config.distDir);
 mix.setResourceRoot('../');
@@ -42,6 +24,7 @@ mainJs.js(`${config.themeDir}/src/admin/js/admin.js`, 'js');
 const mainStyle = mix.sass(`${config.themeDir}/src/scss/main.scss`, 'css');
 mainStyle.sass(`${config.themeDir}/src/admin/scss/admin.scss`, 'css');
 mainStyle.sass(`${config.themeDir}/src/scss/bootstrap-grid.scss`, 'css');
+
 getFiles(directoryPath).forEach((filepath) => mainStyle.sass(`${directoryPath}/${filepath}`, 'css'));
 
 const output = {
@@ -49,26 +32,46 @@ const output = {
     chunkFilename: 'js/[name].js',
 };
 
-mix.webpackConfig({
+mix.extend('rewriteRules', (webpackConfig) => {
+  const fontsRule = /(\.(woff2?|ttf|eot|otf)$|font.*\.svg$)/;
+  const imagesRule = /(\.(png|jpe?g|gif|webp)$|^((?!font).)*\.svg$)/;
+
+  const fonts = webpackConfig.module.rules.find((rule) => String(rule.test) === String(fontsRule));
+  const images = webpackConfig.module.rules.find((rule) => String(rule.test) === String(imagesRule));
+
+  if (fonts && fonts.use && fonts.use[0]) {
+    fonts.use[0].options.name = `${Config.fileLoaderDirs.fonts}/[name]-[contenthash].[ext]`;
+  }
+
+  if (images && images.use && images.use[0]) {
+    images.use[0].options.name = `${Config.fileLoaderDirs.images}/[name]-[hash].[ext]`;
+  }
+});
+
+mix.rewriteRules();
+
+mix.webpackConfig((webpack) => {
+  return {
     output,
     externals: config.externals,
     watchOptions: {
-        ignored: /node_modules/,
+      ignored: /node_modules/,
     },
-    plugins: webpackPlugins,
+    plugins,
+  };
 });
 
-mix.sourceMaps();
+mix.sourceMaps(false);
 
 mix.options({
-    processCssUrls: true,
-    // terser: {
-    //     parallel: true,
-    //     cache: true,
-    //     terserOptions: {
-    //         compress: mix.inProduction(),
-    //     },
-    // },
+  processCssUrls: true,
+  terser: {
+    parallel: true,
+    // cache: true,
+    terserOptions: {
+      compress: mix.inProduction(),
+    },
+  },
 });
 
 if (mix.inProduction()) {

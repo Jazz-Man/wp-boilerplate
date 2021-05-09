@@ -24,7 +24,8 @@
     "bootstrap": "^4.6.0",
     "bootstrap.native": "^3.0.15-alpha2",
     "document-ready": "^2.0.2",
-    "fast-async": "^6.3.8"
+    "fast-async": "^6.3.8",
+    "font-awesome": "4"
   },
   "devDependencies": {
     "@types/bootstrap": "^5.0.13",
