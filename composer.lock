@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a5de4a1fd37d1a89d82428feb8cc69a",
+    "content-hash": "c57500e933269ce321fe1bc3675b7897",
     "packages": [
         {
             "name": "composer/installers",
@@ -151,6 +151,54 @@
                 }
             ],
             "time": "2021-04-28T06:42:17+00:00"
+        },
+        {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.105",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "719c1ed49224857800c3dc40838b6b761d046105"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/719c1ed49224857800c3dc40838b6b761d046105",
+                "reference": "719c1ed49224857800c3dc40838b6b761d046105",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.5|^6.5|^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "time": "2021-03-03T20:55:48+00:00"
         },
         {
             "name": "jazzman/autoload-interface",
@@ -509,6 +557,52 @@
             ],
             "description": "WordPres Db PDO Wrapper",
             "time": "2021-04-02T14:50:11+00:00"
+        },
+        {
+            "name": "jazzman/wp-geoip",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jazz-Man/wp-geoip.git",
+                "reference": "1908a724c91bbe68ba9a2ec0830e03c6539f3ab8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-geoip/zipball/1908a724c91bbe68ba9a2ec0830e03c6539f3ab8",
+                "reference": "1908a724c91bbe68ba9a2ec0830e03c6539f3ab8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-maxminddb": "*",
+                "jazzman/parameter-bag": "^1.2",
+                "jazzman/singleton-trait": "^1.1",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "dg/composer-cleaner": "^2.2",
+                "maxmind-db/reader": "^1.8",
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JazzMan\\GeoIP\\": "src"
+                },
+                "files": [
+                    "helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vasyl Sokolyk",
+                    "email": "vsokolyk@gmail.com"
+                }
+            ],
+            "time": "2021-01-04T17:39:38+00:00"
         },
         {
             "name": "jazzman/wp-mail",
