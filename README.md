@@ -1,5 +1,6 @@
 # [Bedrock](https://roots.io/bedrock/)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d3976320f0194b12a1db639dc2de5c78)](https://app.codacy.com/gh/Jazz-Man/wp-boilerplate?utm_source=github.com&utm_medium=referral&utm_content=Jazz-Man/wp-boilerplate&utm_campaign=Badge_Grade_Settings)
 [![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
 [![Build Status](https://img.shields.io/circleci/build/gh/roots/bedrock?style=flat-square)](https://circleci.com/gh/roots/bedrock)
 [![Follow Roots](https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2)](https://twitter.com/rootswp)
