@@ -243,16 +243,16 @@
         },
         {
             "name": "jazzman/custom-post-type",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/custom-post-type.git",
-                "reference": "a33452d76edb8805f6fbd8741d25f74e9bca3e40"
+                "reference": "0a1da648e9608f62905b4adab025563d6395d973"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/custom-post-type/zipball/a33452d76edb8805f6fbd8741d25f74e9bca3e40",
-                "reference": "a33452d76edb8805f6fbd8741d25f74e9bca3e40",
+                "url": "https://api.github.com/repos/Jazz-Man/custom-post-type/zipball/0a1da648e9608f62905b4adab025563d6395d973",
+                "reference": "0a1da648e9608f62905b4adab025563d6395d973",
                 "shasum": ""
             },
             "require": {
@@ -264,7 +264,7 @@
                 "dg/composer-cleaner": "^2.2",
                 "phpmd/phpmd": "@stable",
                 "roave/security-advisories": "dev-master",
-                "roots/wordpress": "^5",
+                "roots/wordpress": "^5.7",
                 "szepeviktor/phpstan-wordpress": "^0.7.5"
             },
             "type": "library",
@@ -301,7 +301,7 @@
                 }
             ],
             "description": "A single class to help you build more advanced custom post types quickly.",
-            "time": "2021-04-15T17:05:08+00:00"
+            "time": "2021-05-16T16:10:51+00:00"
         },
         {
             "name": "jazzman/inflector",
@@ -444,16 +444,16 @@
         },
         {
             "name": "jazzman/wp-app-config",
-            "version": "2.1.3",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/wp-app-config.git",
-                "reference": "d564c5e80d511449c70584a72765f598229c2d63"
+                "reference": "20587626ffabd35a09d758d2b163c76c0cdf6c6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/wp-app-config/zipball/d564c5e80d511449c70584a72765f598229c2d63",
-                "reference": "d564c5e80d511449c70584a72765f598229c2d63",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-app-config/zipball/20587626ffabd35a09d758d2b163c76c0cdf6c6a",
+                "reference": "20587626ffabd35a09d758d2b163c76c0cdf6c6a",
                 "shasum": ""
             },
             "require": {
@@ -499,7 +499,7 @@
                     "email": "vsokolyk@gmail.com"
                 }
             ],
-            "time": "2021-04-15T16:52:33+00:00"
+            "time": "2021-05-16T15:33:31+00:00"
         },
         {
             "name": "jazzman/wp-db-pdo",
@@ -719,16 +719,16 @@
         },
         {
             "name": "jazzman/wp-performance",
-            "version": "2.2.6",
+            "version": "2.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/wp-performance.git",
-                "reference": "4607f467b7b49cd4176cfc93f8d7470736c57aaf"
+                "reference": "26ecd7bdface07366b65f684ed0d495b8673afeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/wp-performance/zipball/4607f467b7b49cd4176cfc93f8d7470736c57aaf",
-                "reference": "4607f467b7b49cd4176cfc93f8d7470736c57aaf",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-performance/zipball/26ecd7bdface07366b65f684ed0d495b8673afeb",
+                "reference": "26ecd7bdface07366b65f684ed0d495b8673afeb",
                 "shasum": ""
             },
             "require": {
@@ -743,7 +743,7 @@
             "require-dev": {
                 "dg/composer-cleaner": "^2.2",
                 "roave/security-advisories": "dev-master",
-                "roots/wordpress": "^5",
+                "roots/wordpress": "^5.7",
                 "wp-cli/wp-cli": "^2.4"
             },
             "type": "wordpress-muplugin",
@@ -780,7 +780,7 @@
                 }
             ],
             "description": "wp-performance",
-            "time": "2021-05-09T12:00:16+00:00"
+            "time": "2021-05-16T16:38:10+00:00"
         },
         {
             "name": "latitude/latitude",
@@ -1106,8 +1106,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.7.1",
-                "reference": "5.7.1"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.7.1"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -1311,16 +1310,16 @@
         },
         {
             "name": "symfony/web-link",
-            "version": "v5.2.3",
+            "version": "v5.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/web-link.git",
-                "reference": "28e6bd9028740602c158f5c6ac8d5e2a2692812e"
+                "reference": "118ef73c177a033955af1342ec54f08dd1bf6d8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/web-link/zipball/28e6bd9028740602c158f5c6ac8d5e2a2692812e",
-                "reference": "28e6bd9028740602c158f5c6ac8d5e2a2692812e",
+                "url": "https://api.github.com/repos/symfony/web-link/zipball/118ef73c177a033955af1342ec54f08dd1bf6d8e",
+                "reference": "118ef73c177a033955af1342ec54f08dd1bf6d8e",
                 "shasum": ""
             },
             "require": {
@@ -1391,7 +1390,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-10T16:29:19+00:00"
+            "time": "2021-03-07T15:51:33+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -1523,12 +1522,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "07314cf15422b2e162d591fe8ef2b850612b808f"
+                "reference": "5ffdb87f627ff16cc392e30515a1fe069cddc3e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/07314cf15422b2e162d591fe8ef2b850612b808f",
-                "reference": "07314cf15422b2e162d591fe8ef2b850612b808f",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5ffdb87f627ff16cc392e30515a1fe069cddc3e2",
+                "reference": "5ffdb87f627ff16cc392e30515a1fe069cddc3e2",
                 "shasum": ""
             },
             "conflict": {
@@ -1576,8 +1575,8 @@
                 "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1|>=2.8.3,<2.8.4",
                 "dolibarr/dolibarr": "<11.0.4",
                 "dompdf/dompdf": ">=0.6,<0.6.2",
-                "drupal/core": ">=7,<7.74|>=8,<8.8.11|>=8.9,<8.9.9|>=9,<9.0.8",
-                "drupal/drupal": ">=7,<7.74|>=8,<8.8.11|>=8.9,<8.9.9|>=9,<9.0.8",
+                "drupal/core": ">=7,<7.80|>=8,<8.9.14|>=9,<9.0.12|>=9.1,<9.1.7",
+                "drupal/drupal": ">=7,<7.80|>=8,<8.9.14|>=9,<9.0.12|>=9.1,<9.1.7",
                 "dweeves/magmi": "<=0.7.24",
                 "endroid/qr-code-bundle": "<3.4.2",
                 "enshrined/svg-sanitize": "<0.13.1",
@@ -1636,6 +1635,7 @@
                 "laravel/framework": "<6.20.26|>=7,<8.40",
                 "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
                 "league/commonmark": "<0.18.3",
+                "lexik/jwt-authentication-bundle": ">=2,<2.10.7|>=2.11,<2.11.3",
                 "librenms/librenms": "<21.1",
                 "livewire/livewire": ">2.2.4,<2.2.6",
                 "magento/community-edition": ">=2,<2.2.10|>=2.3,<2.3.3",
@@ -1756,20 +1756,21 @@
                 "symfony/http-foundation": ">=2,<2.8.52|>=3,<3.4.35|>=4,<4.2.12|>=4.3,<4.3.8|>=4.4,<4.4.7|>=5,<5.0.7",
                 "symfony/http-kernel": ">=2,<2.8.52|>=3,<3.4.35|>=4,<4.2.12|>=4.3,<4.4.13|>=5,<5.1.5",
                 "symfony/intl": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/maker-bundle": ">=1.27,<1.31.1",
                 "symfony/mime": ">=4.3,<4.3.8",
                 "symfony/phpunit-bridge": ">=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/polyfill": ">=1,<1.10",
                 "symfony/polyfill-php55": ">=1,<1.10",
                 "symfony/proxy-manager-bridge": ">=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/routing": ">=2,<2.0.19",
-                "symfony/security": ">=2,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7|>=4.4,<4.4.7|>=5,<5.0.7",
+                "symfony/security": ">=2,<2.7.51|>=2.8,<3.4.48|>=4,<4.4.23|>=5,<5.2.8",
                 "symfony/security-bundle": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
-                "symfony/security-core": ">=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8,<2.8.37|>=3,<3.3.17|>=3.4,<3.4.7|>=4,<4.0.7",
+                "symfony/security-core": ">=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8,<3.4.48|>=4,<4.4.23|>=5,<5.2.8",
                 "symfony/security-csrf": ">=2.4,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
-                "symfony/security-guard": ">=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
-                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.2.12|>=4.3,<4.3.8|>=4.4,<4.4.7|>=5,<5.0.7",
+                "symfony/security-guard": ">=2.8,<3.4.48|>=4,<4.4.23|>=5,<5.2.8",
+                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.51|>=2.8,<3.4.48|>=4,<4.4.23|>=5,<5.2.8",
                 "symfony/serializer": ">=2,<2.0.11",
-                "symfony/symfony": ">=2,<2.8.52|>=3,<3.4.35|>=4,<4.2.12|>=4.3,<4.4.13|>=5,<5.1.5",
+                "symfony/symfony": ">=2,<3.4.48|>=4,<4.4.23|>=5,<5.2.8",
                 "symfony/translation": ">=2,<2.0.17",
                 "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
                 "symfony/var-exporter": ">=4.2,<4.2.12|>=4.3,<4.3.8",
@@ -1865,7 +1866,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-06T19:08:33+00:00"
+            "time": "2021-05-13T21:03:10+00:00"
         },
         {
             "name": "symfony/var-dumper",
