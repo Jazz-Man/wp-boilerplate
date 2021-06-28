@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Jazz-Man/wp-boilerplate#readme",
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "bootstrap.native": "^3.0.15-alpha2",
+    "bootstrap.native": "^4.0.2",
     "document-ready": "^2.0.2",
     "fast-async": "^6.3.8",
     "font-awesome": "4"
