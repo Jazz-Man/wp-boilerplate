@@ -33,7 +33,7 @@
     "@types/jquery": "^3.5.5",
     "@types/node": "^15.0.2",
     "@wordpress/base-styles": "^3.4.3",
-    "@wordpress/block-library": "^2.29.3",
+    "@wordpress/block-library": "^5.0.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "jquery": "^3.6.0",
     "laravel-mix": "^6.0.19",
