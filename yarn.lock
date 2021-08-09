@@ -2554,13 +2554,13 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap.native@^3.0.15-alpha2:
-  version "3.0.15-alpha2"
-  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-3.0.15-alpha2.tgz#354238d4f737508aa1da91974e462dbb94cf2695"
-  integrity sha512-I+D5bU+R8rKG2L/9VQ/JTywP+j2yBWeZnASOKzqrXqll0gU2ba57Vv+qr8spRaaeKlieCukyRv9E0sWyNxcRKw==
+bootstrap.native@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-4.0.4.tgz#b91657189018c074208436bda106ca3dbc8b4085"
+  integrity sha512-ccUMAGgODl6S3z6e7ufGbJKSL1lKd9gCLl8vtnBKZIwQALZIPd0XJS28BqxN41FSTACo/u3oEy9E8euCPtbCzA==
   dependencies:
     minifill "^0.0.16"
-    shorter-js "^0.2.0-alpha4"
+    shorter-js "^0.2.1"
 
 bootstrap@^4.6.0:
   version "4.6.0"
@@ -8055,10 +8055,10 @@ shellwords@^0.1.1:
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
-shorter-js@^0.2.0-alpha4:
-  version "0.2.0-alpha4"
-  resolved "https://registry.yarnpkg.com/shorter-js/-/shorter-js-0.2.0-alpha4.tgz#f54ba1fadd3038a9af15a6414e5136b129fbf980"
-  integrity sha512-E/tt66jZEGn2smjoW+KRzm6GWS9qek4eBHW1sgS63BmMLuZX7liKohB7RO5uzN58H8n/OLQaBb6l1W0avi9+XA==
+shorter-js@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/shorter-js/-/shorter-js-0.2.1.tgz#e1c5e4730cec60eaeac2c58961d1cf930bc39337"
+  integrity sha512-C5w9DWKgmtduDIm+sPreDHBnXJ9mbT6g6ARhcqIQ4Ys7Zj8gqmfvIPX6YoW0tXXdCnL/xlni24CWTFXm4GCecA==
 
 showdown@^1.9.1:
   version "1.9.1"
