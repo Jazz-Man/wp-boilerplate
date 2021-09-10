@@ -1463,10 +1463,10 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
-"@wordpress/base-styles@^3.4.3":
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/@wordpress/base-styles/-/base-styles-3.4.3.tgz#389ca7740588bf77a5cac76a9873d776a5fc5b8b"
-  integrity sha512-HabpKnrXN2CEC10IvQrZWjg6hQDxPt1jhARl7DCZBKqUTYmdbRYxQ6ZKoPnJcgbk2O6iIjBGXe8i4Gz+84I4Xw==
+"@wordpress/base-styles@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/base-styles/-/base-styles-4.0.0.tgz#0308a9d194b99f9a66a8435e3f59afbc90b6bfd0"
+  integrity sha512-kvgBUFKzQwgv7j0QX5G4/Rmb11oAAmi5+yG+4fYEOprQMXMf/o5SeYvIN+h7zaHN4naYxjdGQTNrkyYoOd0LSg==
 
 "@wordpress/blob@^2.13.2":
   version "2.13.2"
