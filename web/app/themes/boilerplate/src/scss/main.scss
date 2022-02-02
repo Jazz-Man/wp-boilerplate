@@ -1,7 +1,15 @@
 * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-@import "init";
-@import "fonts";
-@import "wp-blocks";
+@import 'init';
+@import 'bootstrap';
+@import 'utils';
+@import 'common';
+@import 'layouts';
+@import 'pages';
+@import 'components';
+
+.test-img-bg {
+    background-image: url(../../images/heart.svg);
+}

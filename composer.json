@@ -37,15 +37,15 @@
     "jazzman/wp-object-cache": "^2.1",
     "jazzman/wp-performance": "^2.2",
     "oscarotero/env": "^2.1",
-    "roots/wordpress": "^5.7",
+    "roots/wordpress": "^5.9",
     "roots/wp-config": "^1.0",
-    "roots/wp-password-bcrypt": "^1.0",
+    "roots/wp-password-bcrypt": "^1.1",
     "vlucas/phpdotenv": "^4.1"
   },
   "require-dev": {
     "dg/composer-cleaner": "^2.2",
     "roave/security-advisories": "dev-master",
-    "symfony/var-dumper": "^5.2"
+    "symfony/var-dumper": "^5.4"
   },
   "replace": {
     "symfony/polyfill-mbstring": "*",
