@@ -2709,10 +2709,11 @@ boolbase@^1.0.0:
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
 bootstrap.native@^4.1.0-alpha3:
-  version "4.1.0-alpha3"
-  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-4.1.0-alpha3.tgz#922444f10ac155d8b67a098fbf03d19f099757c1"
-  integrity sha512-VjQn7ga7EtIzAoXWwXHUfAW45LVjFvmF5hKL1KY/CBGAtEj2IhTx2UCQrtqao5mG5Mqo12j/rPyt2T/8TsNkkw==
+  version "4.1.0-alpha4"
+  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-4.1.0-alpha4.tgz#8a98c458a134e5e341c533aaf947d6b3893d3a41"
+  integrity sha512-clexjiBw0Hyw+uNnx31VXfPeIrn1MxuvsEY/9JNmBDlLCS07Cjqjc+28Doxnzubh34eULIqKysvxd+YwvTG3+g==
   dependencies:
+    event-listener.js "^0.0.4"
     minifill "^0.0.17"
     shorter-js "^0.3.0-alpha22"
 
@@ -3922,6 +3923,11 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+event-listener.js@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/event-listener.js/-/event-listener.js-0.0.4.tgz#b858953776c10499109b1662485e36d4add1decc"
+  integrity sha512-GKrrQ9sF3l/MsRlnjeYtDDtC6iQmw/blguyEOpPQKnGx5ue7LyBf0tsD+d2wLIF6v/NZwwjlxujAxg23jqL2YQ==
 
 eventemitter3@^4.0.0:
   version "4.0.7"
