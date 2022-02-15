@@ -2709,12 +2709,13 @@ boolbase@^1.0.0:
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
 bootstrap.native@^4.1.0-alpha3:
-  version "4.1.0-alpha3"
-  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-4.1.0-alpha3.tgz#922444f10ac155d8b67a098fbf03d19f099757c1"
-  integrity sha512-VjQn7ga7EtIzAoXWwXHUfAW45LVjFvmF5hKL1KY/CBGAtEj2IhTx2UCQrtqao5mG5Mqo12j/rPyt2T/8TsNkkw==
+  version "4.1.0-alpha6"
+  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-4.1.0-alpha6.tgz#c38106d1866b61d668321f7b208635b1059bc558"
+  integrity sha512-kce+0yd5zm0DVifSZWWlIKxQM2WcJNQOF5BVxS3LqoSQqqtbk6uSqVOIppEF8HathOcpEUNfRzEFb05dv4WUeA==
   dependencies:
+    event-listener.js "^0.0.5"
     minifill "^0.0.17"
-    shorter-js "^0.3.0-alpha22"
+    shorter-js "^0.3.0-alpha24"
 
 bootstrap@4:
   version "4.6.1"
@@ -3922,6 +3923,11 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+event-listener.js@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/event-listener.js/-/event-listener.js-0.0.5.tgz#ec2f853cbc61c98ee9ad1b240dd10d1f425955a5"
+  integrity sha512-4mryaCw4/sEBxWDxQGK6oAznxERj5XMo7QlfYYTP64keMyBCduvyLDtX25Z16L2HYn/f8zpLQ2H1Cay9C6IJCw==
 
 eventemitter3@^4.0.0:
   version "4.0.7"
@@ -7066,10 +7072,10 @@ shellwords@^0.1.1:
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
-shorter-js@^0.3.0-alpha22:
-  version "0.3.0-alpha22"
-  resolved "https://registry.yarnpkg.com/shorter-js/-/shorter-js-0.3.0-alpha22.tgz#5e129deeab09ff574067077fd9adc7760a638aec"
-  integrity sha512-sPaWN45x//7D+PcFR1IIMUE1lhIAUEeGS//FBTTAw0t7e6QMRMhWuvRRKboNua0FMa/IP4ZIy0cVoa8zZpPEwg==
+shorter-js@^0.3.0-alpha24:
+  version "0.3.0-alpha25"
+  resolved "https://registry.yarnpkg.com/shorter-js/-/shorter-js-0.3.0-alpha25.tgz#463b36a183ba8a7884c9420b2917f919afdfea2b"
+  integrity sha512-aMjvXvEUk2RodbDLLzje+CoLs243AbGoJdTF+Qb9g0rcnHzEdoH9djtLGzkooXoFBsKPc5fpQ47Gja1u4R8fNw==
 
 showdown@^1.9.1:
   version "1.9.1"
