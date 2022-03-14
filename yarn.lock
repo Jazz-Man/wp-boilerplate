@@ -1840,9 +1840,9 @@
     "@babel/runtime" "^7.16.0"
 
 "@wordpress/base-styles@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/base-styles/-/base-styles-4.1.0.tgz#814318562278ec832f932e025172d46ff34447d6"
-  integrity sha512-rjyMWFs0WWE16w77sHffaXBFosg15iUUVpQr/H4eEElHE/JpXFZJczMbM3yx5tSH+72S3sPFVn5NYn4qHLP7Rg==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/base-styles/-/base-styles-4.2.1.tgz#35c66bc986c69ab7cbb06cf2e460182bfdcdebc2"
+  integrity sha512-Ly2qsVU2DwGa3wprDOErcoG6J5DPIML27eCCw48Ag8Jg98UTp9eT5sDCllT3jaDHb4ll3AH5F9c64SboNIdtSA==
 
 "@wordpress/blob@^3.3.0":
   version "3.3.0"
