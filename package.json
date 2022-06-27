@@ -46,7 +46,7 @@
     "prettier": "^2.5.1",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.49.7",
-    "sass-loader": "^12.1.0"
+    "sass-loader": "^13.0.1"
   },
   "browserslist": [
     "last 2 years",
