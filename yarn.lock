@@ -1364,6 +1364,16 @@
   resolved "https://registry.yarnpkg.com/@tannin/postfix/-/postfix-1.1.0.tgz#6071f4204ae26c2e885cf3a3f1203a9f71e3f291"
   integrity sha512-oocsqY7g0cR+Gur5jRQLSrX2OtpMLMse1I10JQBm8CdGMrDkh1Mg2gjsiquMHRtBs4Qwu5wgEp5GgIYHk4SNPw==
 
+"@thednp/event-listener@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@thednp/event-listener/-/event-listener-1.0.4.tgz#dc92f2318283390089bfad683faa04939a27872f"
+  integrity sha512-EAYzsRiNPdb1yWeisu0WCGUtloHD6P6IpGekJxgBvPR2qNFuMsfQI3XAq+LEJiFKIGKF503JoRfjHcGTO2F+Pw==
+
+"@thednp/shorty@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@thednp/shorty/-/shorty-1.0.3.tgz#65394e7420d2dd42d219f8da759a68f1a54564f0"
+  integrity sha512-PPaERUGmRpi2eWxYUV5yv/pvalPgPOjwKRmRqGMWGuV8xgkvxgtjKIiFJA2D2ei4l4Ih9mEBktDg6Z9+y+To9Q==
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
@@ -2711,13 +2721,12 @@ boolbase@^1.0.0:
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
 bootstrap.native@^4.1.0-alpha3:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-4.1.2.tgz#45349920a2df7f052435bb0739b37a45d568740e"
-  integrity sha512-Lq88FJ+MSFXjpi6kCFmzifZ6faqvjsoY0m/zgvscsB1rcBEiAOHvJSZXG7FboNxZ9m12CtRQd8PO3Wh58RpM1Q==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-4.2.0.tgz#61428b9a296c5d5e590477c086b1d8fa65c47d6b"
+  integrity sha512-KefLTHN76MI/bwPUTipTYtU2YcQPf1ATUmtx8zzTqbx0BVvopp+dFGws23+rEcdnA6N0lff/k8Qs7xgEScb3Dg==
   dependencies:
-    event-listener.js "^0.0.5"
-    minifill "^0.0.17"
-    shorter-js "^0.3.2"
+    "@thednp/event-listener" "^1.0.4"
+    "@thednp/shorty" "^1.0.3"
 
 bootstrap@4:
   version "4.6.1"
@@ -3897,11 +3906,6 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
-
-event-listener.js@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/event-listener.js/-/event-listener.js-0.0.5.tgz#ec2f853cbc61c98ee9ad1b240dd10d1f425955a5"
-  integrity sha512-4mryaCw4/sEBxWDxQGK6oAznxERj5XMo7QlfYYTP64keMyBCduvyLDtX25Z16L2HYn/f8zpLQ2H1Cay9C6IJCw==
 
 eventemitter3@^4.0.0:
   version "4.0.7"
@@ -5225,11 +5229,6 @@ mini-css-extract-plugin@^1.6.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
     webpack-sources "^1.1.0"
-
-minifill@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/minifill/-/minifill-0.0.17.tgz#8e5fab670e07f14ec67b2459735bb1fbfc48f2b0"
-  integrity sha512-tV56LFXsi8vjH4tUExtlu8aPKKQw/U/mn4OIrDU9x30H+9sP8/dWFbXzkAPmcH6o+9fho98kyafnk4VgQViYQQ==
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
@@ -7006,11 +7005,6 @@ shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
-
-shorter-js@^0.3.2:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/shorter-js/-/shorter-js-0.3.4.tgz#3c471995b88d38e852c2aeb350ce4e7ac3f70d51"
-  integrity sha512-rVgQmFEd9aZ83fjQw5ct+TO7ll8N+KcoMlvaC5rqz/mrwG1uZe9Y88Wv+9a+ps3lbMq1iJAxaDgExNQARVRHlw==
 
 showdown@^1.9.1:
   version "1.9.1"
