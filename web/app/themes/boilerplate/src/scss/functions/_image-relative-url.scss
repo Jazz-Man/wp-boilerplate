@@ -1,3 +1,0 @@
-@function image-relative-url($path) {
-    @return '#{$images-path}#{$path}';
-}

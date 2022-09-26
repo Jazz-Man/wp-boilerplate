@@ -1,8 +1,14 @@
-@import '~font-awesome/scss/variables';
-@import '~font-awesome/scss/mixins';
-@import "~bootstrap/scss/functions";
-@import "functions/functions";
-@import "variables";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
+@import '~bootstrap/scss/functions';
+// Custom function
+@import 'functions';
+
+// Custom variables
+@import 'variables';
+@import '~bootstrap/scss/variables';
+
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+
+// Custom mixins
 @import 'mixins';
+@import '~bootstrap/scss/utilities';
