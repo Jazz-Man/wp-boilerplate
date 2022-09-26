@@ -1,14 +1,13 @@
 {
-  "name": "bedrock",
+  "name": "wp-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "copy-block-styles": "node copy-block-styles.js",
-    "development": "ENV=development WEBPACK_ARGS='--devtool source-map --progress' yarn run build",
-    "watch": "ENV=development WEBPACK_ARGS='-w --output-pathinfo --devtool source-map --progress' yarn run build",
-    "production": "WEBPACK_ARGS=\"--mode production --color\" yarn run build",
-    "build": "NODE_ENV=${ENV:-production} node_modules/webpack/bin/webpack.js ${WEBPACK_ARGS} --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "development": "mix build",
+    "watch": "mix watch",
+    "production": "mix build --production"
   },
   "repository": {
     "type": "git",
@@ -21,32 +20,27 @@
   },
   "homepage": "https://github.com/Jazz-Man/wp-boilerplate#readme",
   "dependencies": {
-    "bootstrap": "4",
-    "bootstrap.native": "^4.1.0-alpha3",
+    "bootstrap": "^5.2.1",
+    "bootstrap.native": "^4.2.0",
     "document-ready": "^2.0.2",
-    "fast-async": "^6.3.8",
-    "font-awesome": "4"
+    "fast-async": "^6.3.8"
   },
   "devDependencies": {
-    "@types/bootstrap": "^5.1.9",
-    "@types/document-ready": "^2.0.0",
-    "@types/jquery": "^3.5.13",
-    "@types/node": "^18.7.14",
-    "@wordpress/base-styles": "^4.1.0",
-    "@wordpress/block-library": "^7.0.2",
+    "@wordpress/base-styles": "^4.9.0",
+    "@wordpress/block-library": "^7.15.0",
     "clean-webpack-plugin": "^4.0.0",
-    "jquery": "^3.6.0",
-    "laravel-mix": "^6.0.41",
+    "laravel-mix": "^6.0.49",
     "laravel-mix-make-file-hash": "^2.2.0",
-    "postcss": "^8.4.6",
+    "postcss": "^8.4.16",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^7.0.1",
-    "postcss-preset-env": "^7.3.0",
-    "postcss-sort-media-queries": "^4.2.1",
-    "prettier": "^2.5.1",
+    "postcss-preset-env": "^7.8.2",
+    "postcss-sort-media-queries": "^4.3.0",
+    "prettier": "^2.7.1",
     "resolve-url-loader": "^5.0.0",
-    "sass": "^1.49.7",
-    "sass-loader": "^13.0.2"
+    "sass": "^1.55.0",
+    "sass-loader": "^12.1.0",
+    "sass-migrator": "^1.7.1"
   },
   "browserslist": [
     "last 2 years",
