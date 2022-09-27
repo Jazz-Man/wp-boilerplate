@@ -12,15 +12,29 @@ use Roots\WPConfig\Config;
 
 use function Env\env;
 
-/** @var string Directory containing all of the site's files */
+/**
+ * Directory containing all of the site's files
+ *
+ * @var string
+ */
 $root_dir = dirname(__DIR__);
 
-/** @var string Document Root */
+/**
+ * Document Root
+ *
+ * @var string
+ */
 $webroot_dir = $root_dir . '/web';
+
 /**
  * Use Dotenv to set required environment variables and load .env file in root
+ * .env.local will override .env if it exists
  */
-$dotenv = Dotenv\Dotenv::createUnsafeImmutable($root_dir);
+$env_files = file_exists($root_dir . '/.env.local')
+    ? ['.env', '.env.local']
+    : ['.env'];
+
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable($root_dir, $env_files, false);
 if (file_exists($root_dir . '/.env')) {
     $dotenv->load();
     $dotenv->required(['WP_HOME', 'WP_SITEURL']);
@@ -40,6 +54,7 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
  */
 Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_SITEURL', env('WP_SITEURL'));
+
 $current_server = parse_url(env('WP_HOME'));
 /**
  * Custom Content Directory
@@ -100,13 +115,17 @@ Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 Config::define('DISALLOW_FILE_EDIT', true);
 // Disable plugin and theme updates and installation from the admin
 Config::define('DISALLOW_FILE_MODS', true);
+// Limit the number of post revisions that Wordpress stores (true (default WP): store every revision)
+Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?: true);
 
 /**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);
+Config::define('WP_DEBUG_LOG', false);
 Config::define('SCRIPT_DEBUG', false);
 ini_set('display_errors', '0');
+
 
 /**
  * Allow WordPress to detect HTTPS when used behind a reverse proxy or a load balancer
@@ -115,6 +134,7 @@ ini_set('display_errors', '0');
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
     $_SERVER['HTTPS'] = 'on';
 }
+
 
 /**
  * HTTP_HOST and SERVER_NAME Security Issues.
@@ -135,7 +155,6 @@ Config::define('USER_COOKIE', "{$cookies_prefix}_user_{$cookies_hash}");
 Config::define('PASS_COOKIE', "{$cookies_prefix}_pass_{$cookies_hash}");
 Config::define('SECURE_AUTH_COOKIE', "{$cookies_prefix}_sec_{$cookies_hash}");
 Config::define('LOGGED_IN_COOKIE', "{$cookies_prefix}_logged_in_{$cookies_hash}");
-
 
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';

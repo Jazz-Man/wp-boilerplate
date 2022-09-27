@@ -1,16 +1,8 @@
 <?php
 
-use Jaybizzle\CrawlerDetect\CrawlerDetect;
+if (!function_exists('app_is_production')) {
 
-if (!\function_exists('app_get_crawler_detect')) {
-    function app_get_crawler_detect(): CrawlerDetect
-    {
-        static $crawler;
-
-        if (null === $crawler) {
-            $crawler = new CrawlerDetect();
-        }
-
-        return $crawler;
+    function app_is_production(): bool {
+        return \defined('WP_ENV') && WP_ENV === 'production';
     }
 }
