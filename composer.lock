@@ -265,122 +265,17 @@
             "time": "2021-08-21T17:38:08+00:00"
         },
         {
-            "name": "jazzman/custom-post-type",
-            "version": "2.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jazz-Man/custom-post-type.git",
-                "reference": "0a1da648e9608f62905b4adab025563d6395d973"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/custom-post-type/zipball/0a1da648e9608f62905b4adab025563d6395d973",
-                "reference": "0a1da648e9608f62905b4adab025563d6395d973",
-                "shasum": ""
-            },
-            "require": {
-                "jazzman/pluralizer": "^1.0",
-                "jazzman/wp-app-config": "^2.1",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "dg/composer-cleaner": "^2.2",
-                "phpmd/phpmd": "@stable",
-                "roave/security-advisories": "dev-master",
-                "roots/wordpress": "^5.7",
-                "szepeviktor/phpstan-wordpress": "^0.7.5"
-            },
-            "type": "library",
-            "extra": {
-                "installer-paths": {
-                    "vendor/wp/mu-plugins/{$name}/": [
-                        "type:wordpress-muplugin"
-                    ],
-                    "vendor/wp/plugins/{$name}/": [
-                        "type:wordpress-plugin"
-                    ],
-                    "vendor/wp/themes/{$name}/": [
-                        "type:wordpress-theme"
-                    ]
-                },
-                "wordpress-install-dir": "vendor/wp"
-            },
-            "autoload": {
-                "files": [
-                    "helper.php"
-                ],
-                "psr-4": {
-                    "JazzMan\\Post\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Vasyl Sokolyk",
-                    "email": "vsokolyk@gmail.com"
-                }
-            ],
-            "description": "A single class to help you build more advanced custom post types quickly.",
-            "support": {
-                "issues": "https://github.com/Jazz-Man/custom-post-type/issues",
-                "source": "https://github.com/Jazz-Man/custom-post-type/tree/2.3.2"
-            },
-            "time": "2021-05-16T16:10:51+00:00"
-        },
-        {
-            "name": "jazzman/inflector",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jazz-Man/inflector.git",
-                "reference": "3283a5d9280ac4cdc6e85d97883012dfae995ae4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/inflector/zipball/3283a5d9280ac4cdc6e85d97883012dfae995ae4",
-                "reference": "3283a5d9280ac4cdc6e85d97883012dfae995ae4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JazzMan\\Inflector\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "V.Sokolyk",
-                    "email": "vsokolyk@gmail.com"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/Jazz-Man/inflector/issues",
-                "source": "https://github.com/Jazz-Man/inflector/tree/master"
-            },
-            "time": "2018-07-16T14:08:07+00:00"
-        },
-        {
             "name": "jazzman/parameter-bag",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/parameter-bag.git",
-                "reference": "71c45b6138dddf9eff716602b720c8ad7a31af04"
+                "reference": "e9944141be0075715a61b9689d1706fbfa44833d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/parameter-bag/zipball/71c45b6138dddf9eff716602b720c8ad7a31af04",
-                "reference": "71c45b6138dddf9eff716602b720c8ad7a31af04",
+                "url": "https://api.github.com/repos/Jazz-Man/parameter-bag/zipball/e9944141be0075715a61b9689d1706fbfa44833d",
+                "reference": "e9944141be0075715a61b9689d1706fbfa44833d",
                 "shasum": ""
             },
             "require": {
@@ -415,77 +310,37 @@
             ],
             "support": {
                 "issues": "https://github.com/Jazz-Man/parameter-bag/issues",
-                "source": "https://github.com/Jazz-Man/parameter-bag/tree/1.3.0"
+                "source": "https://github.com/Jazz-Man/parameter-bag/tree/1.3.1"
             },
-            "time": "2022-09-25T12:39:11+00:00"
-        },
-        {
-            "name": "jazzman/pluralizer",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jazz-Man/pluralizer.git",
-                "reference": "6a27ff69ea00b1975bc91cf8a6a275598744331c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/pluralizer/zipball/6a27ff69ea00b1975bc91cf8a6a275598744331c",
-                "reference": "6a27ff69ea00b1975bc91cf8a6a275598744331c",
-                "shasum": ""
-            },
-            "require": {
-                "jazzman/inflector": "^1.0",
-                "php": ">=5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JazzMan\\Pluralizer\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "V.Sokolyk",
-                    "email": "vsokolyk@gmail.com"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/Jazz-Man/pluralizer/issues",
-                "source": "https://github.com/Jazz-Man/pluralizer/tree/master"
-            },
-            "time": "2018-07-16T14:22:09+00:00"
+            "time": "2022-09-27T11:25:12+00:00"
         },
         {
             "name": "jazzman/wp-app-config",
-            "version": "2.3.0",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/wp-app-config.git",
-                "reference": "bf25af306181eb3784f73dfd70d1947a4025b6f4"
+                "reference": "7f719ea7161275f1d4cadfedf4d353b0071f28a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/wp-app-config/zipball/bf25af306181eb3784f73dfd70d1947a4025b6f4",
-                "reference": "bf25af306181eb3784f73dfd70d1947a4025b6f4",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-app-config/zipball/7f719ea7161275f1d4cadfedf4d353b0071f28a1",
+                "reference": "7f719ea7161275f1d4cadfedf4d353b0071f28a1",
                 "shasum": ""
             },
             "require": {
-                "jazzman/parameter-bag": "^1.2",
-                "php": ">=7.4"
+                "jazzman/parameter-bag": "^1.3",
+                "php": "^7.4|^8.1"
             },
             "require-dev": {
                 "jazzman/php-cs-fixer-rules": "^0.1.2",
-                "php-stubs/wordpress-stubs": "^5.9",
+                "php-stubs/wordpress-stubs": "^6.0",
                 "phpmd/phpmd": "@stable",
                 "phpstan/extension-installer": "^1.1",
-                "roave/security-advisories": "dev-master",
-                "roots/wordpress": "^5.9",
+                "roave/security-advisories": "@dev",
+                "roots/wordpress": "^6.0",
                 "szepeviktor/phpstan-wordpress": "^1.1",
-                "vimeo/psalm": "^4.26"
+                "vimeo/psalm": "^4.27"
             },
             "type": "library",
             "extra": {
@@ -522,9 +377,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Jazz-Man/wp-app-config/issues",
-                "source": "https://github.com/Jazz-Man/wp-app-config/tree/2.3.0"
+                "source": "https://github.com/Jazz-Man/wp-app-config/tree/2.3.2"
             },
-            "time": "2022-08-21T19:54:55+00:00"
+            "time": "2022-10-02T16:16:54+00:00"
         },
         {
             "name": "jazzman/wp-db-pdo",
@@ -720,16 +575,16 @@
         },
         {
             "name": "jazzman/wp-nav-menu-cache",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/wp-nav-menu-cache.git",
-                "reference": "d0d19ea15f4f2e6bc16c7f9f7847805bd8556c51"
+                "reference": "e47a88a43753cabfd8ff366b1e6364105c68f293"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/wp-nav-menu-cache/zipball/d0d19ea15f4f2e6bc16c7f9f7847805bd8556c51",
-                "reference": "d0d19ea15f4f2e6bc16c7f9f7847805bd8556c51",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-nav-menu-cache/zipball/e47a88a43753cabfd8ff366b1e6364105c68f293",
+                "reference": "e47a88a43753cabfd8ff366b1e6364105c68f293",
                 "shasum": ""
             },
             "require": {
@@ -743,7 +598,7 @@
                 "jazzman/php-cs-fixer-rules": "^0.1.2",
                 "phpmd/phpmd": "@stable",
                 "phpstan/extension-installer": "^1.1",
-                "rector/rector": "^0.14.3",
+                "rector/rector": "^0.14.5",
                 "roave/security-advisories": "@dev",
                 "roots/wordpress": "^6.0",
                 "szepeviktor/phpstan-wordpress": "^1.1",
@@ -784,44 +639,41 @@
             ],
             "support": {
                 "issues": "https://github.com/Jazz-Man/wp-nav-menu-cache/issues",
-                "source": "https://github.com/Jazz-Man/wp-nav-menu-cache/tree/0.1.4"
+                "source": "https://github.com/Jazz-Man/wp-nav-menu-cache/tree/0.1.5"
             },
-            "time": "2022-09-26T13:17:54+00:00"
+            "time": "2022-09-30T16:38:44+00:00"
         },
         {
             "name": "jazzman/wp-performance",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/wp-performance.git",
-                "reference": "bc4247598eb711d954d03fff427dd55296e4fc8f"
+                "reference": "1253befa4036c4ec7c8dfd93bf7a0e384628536b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/wp-performance/zipball/bc4247598eb711d954d03fff427dd55296e4fc8f",
-                "reference": "bc4247598eb711d954d03fff427dd55296e4fc8f",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-performance/zipball/1253befa4036c4ec7c8dfd93bf7a0e384628536b",
+                "reference": "1253befa4036c4ec7c8dfd93bf7a0e384628536b",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1|^2",
                 "jazzman/autoload-interface": "^0.3.1",
-                "jazzman/custom-post-type": "^2.3",
                 "jazzman/wp-app-config": "^2.3",
                 "jazzman/wp-db-pdo": "^0.1.4",
                 "jazzman/wp-duplicate-post": "^1.0",
-                "jazzman/wp-nav-menu-cache": "^0.1.4",
+                "jazzman/wp-nav-menu-cache": "^0.1.5",
                 "php": "^7.4|^8.1"
             },
             "require-dev": {
-                "jazzman/php-cs-fixer-rules": "^0.1.2",
+                "jazzman/php-cs-fixer-rules": "^0.1.3",
                 "php-stubs/wordpress-stubs": "^6.0",
-                "phpmd/phpmd": "@stable",
                 "phpstan/extension-installer": "^1.1",
                 "rector/rector": "^0.14.3",
-                "roave/security-advisories": "dev-master",
+                "roave/security-advisories": "@dev",
                 "roots/wordpress": "^6.0",
-                "szepeviktor/phpstan-wordpress": "^1.1",
-                "vimeo/psalm": "^4.27"
+                "szepeviktor/phpstan-wordpress": "^1.1"
             },
             "type": "wordpress-muplugin",
             "extra": {
@@ -859,9 +711,9 @@
             "description": "wp-performance",
             "support": {
                 "issues": "https://github.com/Jazz-Man/wp-performance/issues",
-                "source": "https://github.com/Jazz-Man/wp-performance/tree/3.3.0"
+                "source": "https://github.com/Jazz-Man/wp-performance/tree/3.4.0"
             },
-            "time": "2022-09-27T08:08:32+00:00"
+            "time": "2022-10-03T19:02:54+00:00"
         },
         {
             "name": "latitude/latitude",
