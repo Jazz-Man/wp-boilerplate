@@ -1,0 +1,94 @@
+namespace: Tests
+support_namespace: Support
+actor_suffix: Tester
+
+settings:
+  colors: true
+  lint: false
+  report_useless_tests: true
+
+paths:
+  tests: tests
+  output: tests/_output
+  data: tests/Support/Data
+  support: tests/Support
+  envs: tests/_envs
+
+bootstrap: _bootstrap.php
+
+params:
+  - .env
+
+modules:
+  enabled:
+    - WPDb
+    - WPLoader
+    - WPBrowser
+    - WPCLI
+
+  config:
+    WPBrowser:
+      url: '%WP_HOME%'
+      adminUsername: '%TEST_ADMIN_USERNAME%'
+      adminPassword: '%TEST_ADMIN_PASSWORD%'
+      adminUrl: /wp/wp-admin
+    WPDb:
+      dsn: 'mysql:host=%TEST_DB_HOST%;dbname=%TEST_DB_NAME%'
+      user: '%TEST_DB_USER%'
+      password: '%TEST_DB_PASSWORD%'
+      dump: 'tests/_data/dump.sql'
+      populate: true
+      createIfNotExists: true
+      cleanup: true
+      url: '%WP_HOME%'
+      tablePrefix: '%TEST_DB_PREFIX%'
+    WPLoader:
+      wpRootFolder: "%WP_ROOT_FOLDER%"
+      dbName: "%TEST_DB_NAME%"
+      dbHost: "%TEST_DB_HOST%"
+      dbUser: "%TEST_DB_USER%"
+      dbPassword: "%TEST_DB_PASSWORD%"
+      tablePrefix: "%TEST_DB_PREFIX%"
+      dbCharset: utf8mb4
+      domain: "%WP_DOMAIN%"
+      adminEmail: "%TEST_ADMIN_EMAIL%"
+      title: "Site Title"
+      phpBinary: php
+      configFile: test-config.php
+      theme: boilerplate
+      AUTH_KEY: "%AUTH_KEY%"
+      SECURE_AUTH_KEY: "%SECURE_AUTH_KEY%"
+      LOGGED_IN_KEY: "%LOGGED_IN_KEY%"
+      NONCE_KEY: "%NONCE_KEY%"
+      AUTH_SALT: "%AUTH_SALT%"
+      SECURE_AUTH_SALT: "%SECURE_AUTH_SALT%"
+      LOGGED_IN_SALT: "%LOGGED_IN_SALT%"
+      NONCE_SALT: "%NONCE_SALT%"
+    WPCLI:
+      path: '%WP_ROOT_FOLDER%'
+      color: true
+      throw: true
+      url: '%WP_HOME%'
+
+extensions:
+  enabled:
+    - Codeception\Extension\RunFailed
+    - lucatume\WPBrowser\Extension\ChromeDriverController
+#    - lucatume\WPBrowser\Extension\BuiltInServerController
+#    - lucatume\WPBrowser\Extension\DockerComposeController
+  config:
+    "lucatume\\WPBrowser\\Extension\\ChromeDriverController":
+      port: 2390
+      binary: /usr/local/bin/chromedriver
+
+  commands:
+    - lucatume\WPBrowser\Command\RunOriginal
+    - lucatume\WPBrowser\Command\RunAll
+    - lucatume\WPBrowser\Command\GenerateWPUnit
+    - lucatume\WPBrowser\Command\DbExport
+    - lucatume\WPBrowser\Command\DbImport
+#    - lucatume\WPBrowser\Command\DevRestart
+#    - lucatume\WPBrowser\Command\DevInfo
+
+#coverage:
+#  enabled: true
