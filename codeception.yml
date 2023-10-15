@@ -6,6 +6,7 @@ settings:
   colors: true
   lint: false
   report_useless_tests: true
+  memory_limit: 1024M
 
 paths:
   tests: tests
