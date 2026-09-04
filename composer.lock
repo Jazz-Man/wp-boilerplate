@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4df3bf0ba1705d0a90fd837ee7eaed4",
+    "content-hash": "4f20793b1bf200bfcfd3dc20f79c9365",
     "packages": [
         {
             "name": "composer/installers",
@@ -3741,15 +3741,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",
-            "version": "0.8.4",
+            "version": "0.9.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
-                "reference": "tags/0.8.4"
+                "reference": "tags/0.9.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.9.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
