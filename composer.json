@@ -80,7 +80,7 @@
     "roave/security-advisories": "@dev",
     "symfony/var-dumper": "^6.4",
     "wp-coding-standards/wpcs": "^3.0",
-    "wpackagist-plugin/wordpress-importer": "^0.8.2"
+    "wpackagist-plugin/wordpress-importer": "^0.9.6"
   },
   "scripts": {
     "clearNodeModules": "rm -rf node_modules",
