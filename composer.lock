@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4df3bf0ba1705d0a90fd837ee7eaed4",
+    "content-hash": "4ae7aa4b49e2134690f039a3b82338f5",
     "packages": [
         {
             "name": "composer/installers",
@@ -878,16 +878,16 @@
         },
         {
             "name": "jazzman/wp-password-argon",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/wp-password-argon.git",
-                "reference": "7d3393272e3b941291639479f5da4f082c18ca8e"
+                "reference": "8968b60f45b3381af8f6efe579e95010e57ea95e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/wp-password-argon/zipball/7d3393272e3b941291639479f5da4f082c18ca8e",
-                "reference": "7d3393272e3b941291639479f5da4f082c18ca8e",
+                "url": "https://api.github.com/repos/Jazz-Man/wp-password-argon/zipball/8968b60f45b3381af8f6efe579e95010e57ea95e",
+                "reference": "8968b60f45b3381af8f6efe579e95010e57ea95e",
                 "shasum": ""
             },
             "require": {
@@ -930,9 +930,9 @@
             "description": "Securely store WordPress user passwords in database with Argon2i hashing and SHA-512 HMAC using PHP's native functions.",
             "support": {
                 "issues": "https://github.com/Jazz-Man/wp-password-argon/issues",
-                "source": "https://github.com/Jazz-Man/wp-password-argon/tree/0.1.0"
+                "source": "https://github.com/Jazz-Man/wp-password-argon/tree/0.2.0"
             },
-            "time": "2022-10-30T22:48:16+00:00"
+            "time": "2025-10-23T19:51:30+00:00"
         },
         {
             "name": "jazzman/wp-performance",

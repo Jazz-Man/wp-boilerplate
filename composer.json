@@ -63,7 +63,7 @@
     "jazzman/wp-duplicate-post": "^1.1",
     "jazzman/wp-mail": "^2.0",
     "jazzman/wp-nav-menu-cache": "^0.3.0",
-    "jazzman/wp-password-argon": "^0.1.0",
+    "jazzman/wp-password-argon": "^0.2.0",
     "jazzman/wp-performance": "^3.6",
     "oscarotero/env": "^2.1",
     "php": "^8.2",
