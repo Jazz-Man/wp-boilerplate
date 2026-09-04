@@ -75,7 +75,7 @@
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-    "jazzman/php-cs-fixer-rules": "^0.2.1",
+    "jazzman/php-cs-fixer-rules": "^0.3.0",
     "phpcompatibility/php-compatibility": "^9.3",
     "roave/security-advisories": "@dev",
     "symfony/var-dumper": "^6.4",
