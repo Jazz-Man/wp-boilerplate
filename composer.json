@@ -44,7 +44,7 @@
     "jazzman/wp-mail": "^2.0",
     "jazzman/wp-nav-menu-cache": "^0.3.0",
     "jazzman/wp-password-argon": "^0.1.0",
-    "jazzman/wp-performance": "^3.4",
+    "jazzman/wp-performance": "^3.6",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
