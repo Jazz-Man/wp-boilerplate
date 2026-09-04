@@ -1,70 +1,112 @@
-const mix = require('laravel-mix');
-const File = require('laravel-mix/src/File');
-const { resolve, dirname, basename } = require('path');
-const fs = require('fs');
-const { themeDir } = require('./webpack.mix.config');
-const baseStylesDir = resolve(__dirname, 'node_modules/@wordpress/base-styles');
-const baseBlockLibraryDir = resolve(__dirname, 'node_modules/@wordpress/block-library/src/');
+require("laravel-mix");
+const File = require("laravel-mix/src/File");
+const { resolve, dirname, basename } = require("node:path");
+const { themeDir } = require("./webpack.mix.config.js");
+const os = require("node:os");
+const baseStylesDir = resolve(__dirname, "node_modules/@wordpress/base-styles");
+const baseBlockLibraryDir = resolve(
+  __dirname,
+  "node_modules/@wordpress/block-library/src",
+);
 
 const wpBlocksDir = `${themeDir}/src/scss/wp-blocks`;
 
-fs.readdir(baseStylesDir, (err, files) => {
-    files.forEach((file) => {
-        const style = new File(`${baseStylesDir}/${file}`);
-        let destination = `${wpBlocksDir}/core/${style.name()}`;
+const baseStyles = new File(baseStylesDir);
 
-        if (style.extension() === '.scss' && !fs.existsSync(destination)) {
-            try {
-                style.copyTo(destination);
-            } catch (err) {
-                console.error(err);
-            }
-        }
-    });
-});
+baseStyles
+  .listContentsAsync({ hidden: false })
+  .then((styles) => {
+    if (!styles.length) return;
 
-const getAllFiles = (dirPath, arrayOfFiles = []) => {
-    const files = fs.readdirSync(dirPath);
+    const indexStyle = [];
 
-    files.forEach((file) => {
-        let _file = `${dirPath}/${file}`;
+    styles.forEach((style) => {
+      if (style.extension() !== ".scss") return;
+      if (style.contains(".native")) return;
 
-        if (fs.statSync(_file).isDirectory()) {
-            arrayOfFiles = getAllFiles(_file, arrayOfFiles);
+      const destination = `${wpBlocksDir}/core/${style.name()}`;
+
+      try {
+        if (File.exists(destination)) {
+          const oldFile = new File(destination);
+
+          if (oldFile.version() !== style.version()) {
+            style.copyTo(destination);
+          }
         } else {
-            arrayOfFiles.push(_file);
+          style.copyTo(destination);
         }
-    });
 
-    return arrayOfFiles;
-};
-
-const blockLibrary = getAllFiles(baseBlockLibraryDir);
-
-if (blockLibrary.length) {
-    blockLibrary.forEach((file) => {
-        const style = new File(file);
-
-        const reqaredName = [
-          'common.scss',
-          'editor.scss',
-          'reset.scss',
-          'style.scss',
-          'theme.scss',
+        const importNames = [
+          "colors",
+          "variables",
+          "mixins",
+          "breakpoints",
+          "animations",
+          "z-index",
+          "default-custom-properties",
         ];
 
-        if ( style.extension() === '.scss' &&  !style.name().includes('native.scss')) {
-            let styleDirName = basename(dirname(file));
-            let newFileName = styleDirName === 'src' ? style.name() : `${styleDirName}/${style.name()}`;
-            let destination = `${wpBlocksDir}/blocks/${newFileName}`;
+        /**
+         * @type {String}
+         */
+        const importName = style.nameWithoutExtension().replace(/_/, "");
 
-            if (!fs.existsSync(destination)) {
-                try {
-                    style.copyTo(destination);
-                } catch (err) {
-                    console.error(err);
-                }
-            }
+        if (importNames.includes(importName)) {
+          indexStyle.push(`@import "${importName}";`);
         }
+      } catch (e) {
+        throw new Error(e);
+      }
     });
-}
+
+    try {
+      if (indexStyle.length) {
+        const indexFile = new File(`${wpBlocksDir}/core/_index.scss`);
+
+        indexFile.write(indexStyle.join(os.EOL));
+      }
+    } catch (e) {
+      throw new Error(e);
+    }
+  })
+  .catch((error) => console.error(error));
+
+const baseBlockLibrary = new File(baseBlockLibraryDir);
+
+baseBlockLibrary
+  .listContentsAsync({ hidden: false })
+  .then((styles) => {
+    styles.forEach((style) => {
+      if (style.extension() !== ".scss") return;
+
+      try {
+        /**
+         * @type {string}
+         */
+        const path = style.path();
+
+        const fileName = style.name();
+
+        const exclude = [".native", "rich-text", "editor", "theme"];
+
+        for (const string of exclude) {
+          if (path.includes(string)) {
+            return;
+          }
+        }
+
+        const styleDirName = basename(dirname(path));
+
+        const newFileName =
+          styleDirName === "src" ? fileName : `${styleDirName}/${fileName}`;
+
+        const destination = `${wpBlocksDir}/blocks/${newFileName}`;
+
+        style.copyTo(destination);
+      } catch (e) {
+        throw new Error(e);
+      }
+    });
+  })
+  .catch((error) => console.error(error));
