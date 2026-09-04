@@ -8,15 +8,15 @@ const publicPath = distDir.replace("web", "");
 
 const externals = {
   jquery: "jQuery",
-  wp: "wp",
   lodash: "lodash",
   react: "React",
-  "react-dom": "ReactDOM"
+  "react-dom": "ReactDOM",
+  wp: "wp",
 };
 
 module.exports = {
-  themeDir,
   distDir,
+  externals,
   publicPath,
-  externals
+  themeDir,
 };
