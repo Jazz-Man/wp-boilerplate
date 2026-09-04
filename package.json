@@ -7,7 +7,8 @@
     "copy-block-styles": "node copy-block-styles.js",
     "development": "mix build",
     "watch": "mix watch",
-    "production": "mix build --production"
+    "production": "mix build --production",
+    "preinstall": "npx only-allow pnpm"
   },
   "repository": {
     "type": "git",
@@ -21,32 +22,32 @@
   "homepage": "https://github.com/Jazz-Man/wp-boilerplate#readme",
   "dependencies": {
     "bootstrap": "^5.2.1",
-    "bootstrap.native": "^4.2.0",
-    "document-ready": "^2.0.2",
     "fast-async": "^6.3.8"
   },
   "devDependencies": {
-    "@wordpress/base-styles": "^4.9.0",
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.23.2",
+    "@types/bootstrap": "^5.2.7",
+    "@types/node": "^20.8.6",
+    "@wordpress/base-styles": "^4.34.0",
     "@wordpress/block-library": "^7.15.0",
-    "clean-webpack-plugin": "^4.0.0",
+    "@wordpress/browserslist-config": "^5.26.0",
+    "@wordpress/prettier-config": "^3.0.0",
     "laravel-mix": "^6.0.49",
     "laravel-mix-make-file-hash": "^2.2.0",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.31",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-loader": "^7.0.1",
-    "postcss-preset-env": "^7.8.2",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.2.0",
     "postcss-sort-media-queries": "^4.3.0",
-    "prettier": "^2.7.1",
+    "prettier": "^3.0.3",
     "resolve-url-loader": "^5.0.0",
-    "sass": "^1.55.0",
-    "sass-loader": "^12.1.0",
+    "sass": "^1.69.3",
+    "sass-loader": "^13.3.2",
     "sass-migrator": "^1.7.1"
   },
   "browserslist": [
-    "last 2 years",
-    ">0.3%",
-    "not ie 11",
-    "not dead",
-    "not op_mini all"
+    "extends @wordpress/browserslist-config"
   ]
 }
