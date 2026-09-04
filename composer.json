@@ -1,42 +1,62 @@
 {
-  "name": "jazzman/wp-boilerplate",
-  "type": "project",
-  "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
   "authors": [
     {
-      "name": "Scott Walkinshaw",
       "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
+      "homepage": "https://github.com/swalkinshaw",
+      "name": "Scott Walkinshaw"
     },
     {
-      "name": "Ben Word",
       "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
+      "homepage": "https://github.com/retlehs",
+      "name": "Ben Word"
     },
     {
-      "name": "Vasyl Sokolyk",
       "email": "vsokolyk@gmail.com",
-      "homepage": "https://github.com/Jazz-Man"
+      "homepage": "https://github.com/Jazz-Man",
+      "name": "Vasyl Sokolyk"
     }
   ],
-  "keywords": [
-    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
-  ],
-  "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
+  "autoload": {
+    "files": ["web/app/themes/boilerplate/includes/helper.php"],
+    "psr-4": {
+      "JazzMan\\Themes\\": "web/app/themes/boilerplate/includes"
+    }
   },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "roots/wordpress-core-installer": true
+    },
+    "apcu-autoloader": true,
+    "classmap-authoritative": true,
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "homepage": "https://roots.io/bedrock/",
+  "keywords": ["bedrock", "composer", "roots", "wordpress", "wp", "wp-config"],
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "name": "jazzman/wp-boilerplate",
+  "prefer-stable": true,
   "repositories": [
     {
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"],
       "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+      "url": "https://wpackagist.org"
     }
   ],
   "require": {
-    "php": "^8.2",
     "jazzman/custom-post-type": "^3.3",
     "jazzman/php-robots": "^2.0",
     "jazzman/wp-app-config": "^2.3",
@@ -46,6 +66,7 @@
     "jazzman/wp-password-argon": "^0.1.0",
     "jazzman/wp-performance": "^3.6",
     "oscarotero/env": "^2.1",
+    "php": "^8.2",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
     "roots/wordpress": "^6.9",
@@ -61,46 +82,19 @@
     "wp-coding-standards/wpcs": "^3.0",
     "wpackagist-plugin/wordpress-importer": "^0.8.2"
   },
-  "config": {
-    "sort-packages": true,
-    "preferred-install": "dist",
-    "optimize-autoloader": true,
-    "classmap-authoritative": true,
-    "apcu-autoloader": true,
-    "allow-plugins": {
-      "composer/installers": true,
-      "roots/wordpress-core-installer": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "extra": {
-    "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
-    },
-    "wordpress-install-dir": "web/wp"
-  },
-  "autoload": {
-    "psr-4": {
-      "JazzMan\\Themes\\":"web/app/themes/boilerplate/includes"
-    },
-    "files": [
-      "web/app/themes/boilerplate/includes/helper.php"
-    ]
-  },
   "scripts": {
-    "post-root-package-install": [
-      "php -r \"copy('.env.example', '.env');\""
-    ],
+    "clearNodeModules": "rm -rf node_modules",
     "deploy": [
       "@clearNodeModules",
       "npm install",
       "npm run production",
       "@clearNodeModules"
     ],
-    "clearNodeModules": "rm -rf node_modules"
-  }
+    "post-root-package-install": ["php -r \"copy('.env.example', '.env');\""]
+  },
+  "support": {
+    "forum": "https://discourse.roots.io/category/bedrock",
+    "issues": "https://github.com/roots/bedrock/issues"
+  },
+  "type": "project"
 }
