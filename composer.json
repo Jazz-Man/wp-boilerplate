@@ -36,7 +36,7 @@
     }
   ],
   "require": {
-    "php": "^8.1",
+    "php": "^8.2",
     "jazzman/custom-post-type": "^3.3",
     "jazzman/php-robots": "^2.0",
     "jazzman/wp-app-config": "^2.3",
@@ -48,13 +48,18 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "^6.3",
+    "roots/wordpress": "^6.9",
     "roots/wp-config": "^1.0",
     "vlucas/phpdotenv": "^5.5"
   },
   "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "jazzman/php-cs-fixer-rules": "^0.2.1",
+    "phpcompatibility/php-compatibility": "^9.3",
     "roave/security-advisories": "@dev",
-    "symfony/var-dumper": "^6.3"
+    "symfony/var-dumper": "^6.4",
+    "wp-coding-standards/wpcs": "^3.0",
+    "wpackagist-plugin/wordpress-importer": "^0.8.2"
   },
   "config": {
     "sort-packages": true,
@@ -64,7 +69,8 @@
     "apcu-autoloader": true,
     "allow-plugins": {
       "composer/installers": true,
-      "roots/wordpress-core-installer": true
+      "roots/wordpress-core-installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
     }
   },
   "minimum-stability": "dev",
