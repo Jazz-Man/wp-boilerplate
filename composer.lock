@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4df3bf0ba1705d0a90fd837ee7eaed4",
+    "content-hash": "0ec0af91fbbdb5813000d9bc2aebffaf",
     "packages": [
         {
             "name": "composer/installers",
@@ -2014,20 +2014,22 @@
         },
         {
             "name": "jazzman/php-cs-fixer-rules",
-            "version": "0.2.1",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jazz-Man/php-cs-fixer-rules.git",
-                "reference": "fb388f0b87a8918ee9b462ee692eb8e0fc3f7c37"
+                "reference": "ba80487c5a2a95aed37e09ce150097556f965489"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jazz-Man/php-cs-fixer-rules/zipball/fb388f0b87a8918ee9b462ee692eb8e0fc3f7c37",
-                "reference": "fb388f0b87a8918ee9b462ee692eb8e0fc3f7c37",
+                "url": "https://api.github.com/repos/Jazz-Man/php-cs-fixer-rules/zipball/ba80487c5a2a95aed37e09ce150097556f965489",
+                "reference": "ba80487c5a2a95aed37e09ce150097556f965489",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4|^8"
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "php": "^8.2"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "@stable"
@@ -2050,9 +2052,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Jazz-Man/php-cs-fixer-rules/issues",
-                "source": "https://github.com/Jazz-Man/php-cs-fixer-rules/tree/0.2.1"
+                "source": "https://github.com/Jazz-Man/php-cs-fixer-rules/tree/0.3.0"
             },
-            "time": "2023-11-27T16:14:50+00:00"
+            "time": "2025-11-17T21:09:17+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
