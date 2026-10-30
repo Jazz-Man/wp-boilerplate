@@ -78,7 +78,7 @@
     "jazzman/php-cs-fixer-rules": "^0.2.1",
     "phpcompatibility/php-compatibility": "^9.3",
     "roave/security-advisories": "@dev",
-    "symfony/var-dumper": "^6.4",
+    "symfony/var-dumper": "^8.1",
     "wp-coding-standards/wpcs": "^3.0",
     "wpackagist-plugin/wordpress-importer": "^0.8.2"
   },
